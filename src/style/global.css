@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: rgb(175, 175, 175);
+  border-radius: 5px;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(143, 143, 143);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px 100px;
+  gap: 20px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 100px;
+}
+
+input {
+  padding: 10px;
+  font-size: large;
+}/*# sourceMappingURL=global.css.map */

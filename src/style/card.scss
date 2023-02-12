@@ -1,0 +1,24 @@
+.card-container{
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px black;
+    background-color: rgb(224, 224, 224);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: none;
+        transition: 200ms;
+    }
+    .btn-group{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        height: 100%;
+        align-items: end;
+    }
+}
