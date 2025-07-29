@@ -1,11 +1,15 @@
+//added zustand for future use of store
+//currently not being used
+
 import { create } from "zustand";
+import type { User } from "../features/users/interface";
 
 export interface AppState {
-    activePanel: string,
-    setActivePanel: (panel: string) => void
+    users: User[] | undefined,
+    setUsers: (users: User[]) => void
 }
 
 export const useStore = create<AppState>((set) =>({
-    activePanel: "All Users",
-    setActivePanel: (panel) => set({activePanel: panel})
+    users: undefined,
+    setUsers: (users) => set({users})
 }))
