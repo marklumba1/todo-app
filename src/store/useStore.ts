@@ -3,13 +3,18 @@
 
 import { create } from "zustand";
 import type { User } from "../features/users/interface";
+import type { PostComment } from "../features/posts/interface";
 
 export interface AppState {
-    users: User[] | undefined,
+    users: User[] | [],
+    comments: PostComment[] | [],
     setUsers: (users: User[]) => void
+    setComments: (comments: PostComment[]) => void
 }
 
 export const useStore = create<AppState>((set) =>({
-    users: undefined,
-    setUsers: (users) => set({users})
+    users: [],
+    comments: [],
+    setUsers: (users) => set({users}),
+    setComments: (comments) => set({comments})
 }))

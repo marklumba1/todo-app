@@ -8,6 +8,11 @@ button{
   background-color: #707fdd1e;
   color:#5A6ACF;
 }
+button:hover{
+   background-color: #707fdd2c;
+   transition: 200ms;
+}
 .cursor-pointer:hover{
   color: #5A6ACF;
+  transition: 200ms;
 }
