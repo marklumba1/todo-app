@@ -18,7 +18,7 @@ interface SidePanelProps {
 const Panel: React.FC<SidePanelProps> = ({ sections }) => {
 
   return (
-    <div className="bg-slate-100  p-3 flex flex-col gap-12 h-full">
+    <div className="bg-slate-100 text-slate-600  p-3 pt-10 flex flex-col gap-12 h-full">
       {sections.map(({ title, items }) => (
         <div key={title}>
           <p className="uppercase tracking-wider text-sm font-light">

@@ -16,7 +16,6 @@ export const todosMenu = [
 ];
 export const contentMenu = [
   { label: "Posts", Icon: TableOfContents, path: "/posts" },
-  { label: "Album", Icon: Album, path: "/album" },
 ];
 
 export const sidePanelSections = [

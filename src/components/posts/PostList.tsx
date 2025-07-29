@@ -42,7 +42,7 @@ export const PostList: React.FC = () => {
   if (!posts || !users) return <p>No data found.</p>;
 
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div className="flex flex-col pt-5 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
       {posts.map((post) => (
         <PostCard
           post={post}

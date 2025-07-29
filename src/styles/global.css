@@ -5,4 +5,7 @@
     font-family: 'Poppins', sans-serif;
     @apply text-slate-600;
   }
+  .h-calc {
+  height: calc(100dvh - 80px);
+}
 }
