@@ -1,14 +1,10 @@
-import Panel from "./components/panel/Panel"
-import { TodoList } from "./components/todos/TodoList"
-import UserList from "./components/users/UsersList"
-import { sidePanelSections } from "./lib/constants"
-
+import Dashboard from "./components/dashboard/Dashboard";
 const App = () => {
-    return (
-        <div>
-            <Panel sections={sidePanelSections}/>
-        </div>
-    )
-}
+  return (
+    <div className="h-dvh">
+      <Dashboard />
+    </div>
+  );
+};
 
-export default App
+export default App;

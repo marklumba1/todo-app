@@ -1,23 +1,24 @@
-export const BASE_URL = "https://jsonplaceholder.typicode.com/"
+import { ChartNoAxesGantt, Users, ListTodo, Check, Clock } from "lucide-react";
+
+export const BASE_URL = "https://jsonplaceholder.typicode.com/";
+
+
+export const overViewMenu = [
+  { label: "Dashboard", Icon: ChartNoAxesGantt},
+];
 
 export const usersMenu = [
-  { label: 'Overview' },
-  { label: 'Name' },
-  { label: 'Username' },
-  { label: 'Email' },
-  { label: 'Address' },
-  { label: 'Phone' },
-  { label: 'Website' },
-  { label: 'Company' },
+  { label: "All Users", Icon: Users},
 ];
 
 export const todosMenu = [
-  { label: 'All Todos' },
-  { label: 'Completed' },
-  { label: 'Pending' },
+  { label: "All", Icon: ListTodo, endpoint: "/todos" },
+  { label: "Completed", Icon: Check, endpoint: "/todos?completed=true" },
+  { label: "Pending", Icon: Clock, endpoint: "/todos?completed=false" },
 ];
 
 export const sidePanelSections = [
-  { title: 'Users', items: usersMenu },
-  { title: 'Todos', items: todosMenu },
+  { title: "Overview", items: overViewMenu },
+  { title: "Users", items: usersMenu },
+  { title: "Todos", items: todosMenu },
 ];

@@ -15,15 +15,14 @@ const PanelMenus: React.FC<PanelMenuProps> = ({
   return (
     <div
       onMouseDown={onClick}
-      className={`px-4 py-4 rounded-xl ${
+      className={`px-4 py-4 rounded-xl flex gap-2 items-center ${
         isActive
           ? "font-bold bg-[#707fdd1e] text-[#5A6ACF]"
-          : "text-[#08243170] hover:bg-[#0824313b]"
+          : "text-[#08243170] hover:bg-[#08243111]"
       } hover:cursor-pointer`}
     >
+      {Icon && <Icon size={20} />}
       <p className=" tracking-wide">{title}</p>
-      {Icon && <Icon />}
-      <p>{isActive}</p>
     </div>
   );
 };
