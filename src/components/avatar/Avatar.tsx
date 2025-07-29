@@ -15,10 +15,8 @@ const Avatar: React.FC<AvatarProps> = ({ name, size = 40 }) => {
 
   return (
     <div
-      className={`flex items-center
-        
-        justify-center rounded bg-[#5A6ACF] text-white font-bold ${size}`}
-          style={{
+      className={`flex items-center justify-center rounded bg-slate-600 text-white font-bold ${size}`}
+      style={{
         width: size,
         height: size,
         minWidth: size,

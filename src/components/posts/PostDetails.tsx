@@ -21,7 +21,9 @@ const PostDetails: React.FC = () => {
     enabled: !!id,
   });
 
-  const { data: postComments } = useQuery<PostComment[]>({
+  const { data: postComments, isLoading: loadingPostComments } = useQuery<
+    PostComment[]
+  >({
     queryKey: ["comments"],
     queryFn: () => fetchComments(id!),
     enabled: !!id,
@@ -46,7 +48,7 @@ const PostDetails: React.FC = () => {
   if (!data) return <p>No data found.</p>;
 
   return (
-    <div className="border border-[#5A6ACF] p-3 rounded-2xl flex flex-col">
+    <div className="border border-slate-600 p-3 rounded-2xl flex flex-col">
       <div className="flex items-center gap-3">
         <Avatar name={user?.name} />
         <div>
@@ -55,7 +57,7 @@ const PostDetails: React.FC = () => {
         </div>
         <Link
           to={"/posts"}
-          className="ml-auto text-[#3f53d1] hover:scale-130 transition"
+          className="ml-auto text-slate-600 hover:scale-130 transition"
         >
           <ArrowLeftCircle size={30} />
         </Link>
@@ -68,9 +70,11 @@ const PostDetails: React.FC = () => {
           {postComments?.length} Comments
         </div>
         <div className="flex flex-col gap-4">
-          {postComments?.map((comment) => (
-            <Comment comment={comment} />
-          ))}
+          {loadingPostComments || !postComments ? (
+            <p>Loading comments...</p>
+          ) : (
+            postComments.map((comment) => <Comment comment={comment} />)
+          )}
         </div>
       </div>
     </div>

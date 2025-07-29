@@ -8,31 +8,28 @@ interface CommentProps {
 const Comment: React.FC<CommentProps> = ({ comment }) => {
   const [showAllText, setShowAllText] = useState(false);
   const commentText =
-    comment.body.length > 150 && !showAllText
-      ? `${comment.body.slice(0, 150)}...`
+    comment.body.length > 100 && !showAllText
+      ? `${comment.body.slice(0, 100)}...`
       : comment.body;
-  console.log(comment);
   return (
-    <div className="text-xs flex gap-2">
+    <div className="flex gap-2">
       <Avatar name={comment.name} size={30} />
       <div className="flex flex-col">
         <p className="uppercase font-bold tracking-wide">
           {comment.name.split(" ").slice(0, 2).join(" ")}
         </p>
-        <p className="text-[12px]">{comment.email}</p>
+        <p>{comment.email}</p>
 
-        <div className="flex mt-1">
-          <p>
-            {commentText}{" "}
-            {comment.body.length > 150 && (
-              <span
+        <div className="mt-2">
+          <p>{commentText}</p>
+           {comment.body.length > 100 && (
+              <button
                 onClick={() => setShowAllText(!showAllText)}
-                className="text-gray-800 font-bold cursor-pointer text-[10px] hover:"
+                className="font-bold cursor-pointer bg-slate-100 rounded py-0.5 px-2 mt-1 text-xs"
               >
                 {!showAllText ? `READ MORE` : `HIDE`}
-              </span>
+              </button>
             )}
-          </p>
         </div>
       </div>
     </div>

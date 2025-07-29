@@ -1,18 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import "tailwindcss";
-* {
-  font-family: 'Poppins', sans-serif;
-}
-button{
-  cursor: pointer;
-  background-color: #707fdd1e;
-  color:#5A6ACF;
-}
-button:hover{
-   background-color: #707fdd2c;
-   transition: 200ms;
-}
-.cursor-pointer:hover{
-  color: #5A6ACF;
-  transition: 200ms;
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+    @apply text-slate-600;
+  }
 }
