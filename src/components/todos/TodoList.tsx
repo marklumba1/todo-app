@@ -14,7 +14,7 @@ export const TodoList:React.FC = () => {
   return (
     <div className="grid grid-cols-3 gap-3">
       {data.map((todo) => (
-        <TodoCard todo={todo} />
+        <TodoCard todo={todo} key={todo.id} />
       ))}
     </div>
   );
