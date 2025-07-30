@@ -1,4 +1,4 @@
-import { ChartNoAxesGantt, Users, ListTodo, TableOfContents, Album } from "lucide-react";
+import { ChartNoAxesGantt, Users, ListTodo, TableOfContents } from "lucide-react";
 
 export const BASE_URL = "https://jsonplaceholder.typicode.com/";
 
