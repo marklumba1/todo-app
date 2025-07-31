@@ -1,4 +1,3 @@
-import Dashboard from "./components/dashboard/Dashboard";
 import { Routes, Route, Navigate, Link } from "react-router-dom";
 import Panel from "./components/panel/Panel";
 import { sidePanelSections } from "./lib/constants";
@@ -20,7 +19,6 @@ const App = () => {
             <Route path="/" element={<Navigate to={"/posts"} />} />
             <Route path="/posts" element={<PostList />} />
             <Route path="/posts/:id" element={<PostDetails />} />
-            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/users" element={<UserList />} />
             <Route path="/todos" element={<TodoList />} />
             <Route
