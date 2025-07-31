@@ -25,11 +25,13 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
         <p className="text-xl font-bold"> {user.name}</p>
         <p>@{user.username}</p>
 
-        <q className="text-xs mt-1 italic">{user.company.catchPhrase}</q>
+        <q className="text-xs mt-1 italic text-center">
+          {user.company.catchPhrase}
+        </q>
       </div>
       <div className="mt-3 text-sm flex flex-col gap-1">
-        {userInfoArr.map((info) => (
-          <div className="flex items-start gap-2">
+        {userInfoArr.map((info, index) => (
+          <div className="flex items-start gap-2" key={index}>
             <info.icon size={16} className="min-w-[16px] mt-0.5" /> {info.text}
           </div>
         ))}

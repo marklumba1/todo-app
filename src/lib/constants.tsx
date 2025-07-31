@@ -1,13 +1,13 @@
-import { ChartNoAxesGantt, Users, ListTodo, TableOfContents } from "lucide-react";
+import { Users, ListTodo, TableOfContents } from "lucide-react";
 
 export const BASE_URL = "https://jsonplaceholder.typicode.com/";
 
 export const usersMenu = [
-  { label: "All Users", Icon: Users, path: "/users" },
+  { label: "Users", Icon: Users, path: "/users" },
 ];
 
 export const todosMenu = [
-  { label: "All Todos", Icon: ListTodo, path: "/todos" },
+  { label: "Todos", Icon: ListTodo, path: "/todos" },
 ];
 export const contentMenu = [
   { label: "Posts", Icon: TableOfContents, path: "/posts" },
